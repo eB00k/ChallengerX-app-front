@@ -1,7 +1,5 @@
-import { Link } from "@tanstack/react-router";
-
 const Home = () => {
-  return <div>Home</div>;
+  return <div className="bg-dark-primary h-screen w-full">Home</div>;
 };
 
 export default Home;

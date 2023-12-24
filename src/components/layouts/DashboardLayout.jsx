@@ -5,10 +5,10 @@ import Navbar from "../navbar/Navbar";
 
 function DashboardLayout() {
   return (
-    <div className="grid grid-areas-layout grid-cols-layout grid-rows-layout">
+    <div className="grid min-h-screen w-full grid-cols-layout grid-rows-layout bg-dark-primary grid-areas-layout">
       <Navbar />
       <Sidebar />
-      <Outlet/>
+      <Outlet />
     </div>
   );
 }
