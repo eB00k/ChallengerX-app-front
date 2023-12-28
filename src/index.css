@@ -38,6 +38,10 @@ body {
     @apply rounded-xl border-[1px] border-border-clr bg-dark-secondary;
   }
 
+  .box-default {
+    @apply bg-dark-content flex aspect-square w-full min-w-10 max-w-20 flex-col items-center justify-center justify-self-center rounded-lg;
+  }
+
   .box-future-day {
   }
 

@@ -123,7 +123,7 @@ export const CHALLENGE_DATA = [
         date: "2024-01-18",
         status: "future",
         is_done: false,
-        percentage: 50,
+        percentage: 0,
     },
     {
         day: 19,
@@ -144,14 +144,14 @@ export const CHALLENGE_DATA = [
         date: "2024-01-21",
         status: "future",
         is_done: false,
-        percentage: 75,
+        percentage: 0,
     },
     {
         day: 22,
         date: "2024-01-22",
         status: "future",
         is_done: false,
-        percentage: 50,
+        percentage: 0,
     },
     {
         day: 23,
@@ -186,27 +186,36 @@ export const CHALLENGE_DATA = [
         date: "2024-01-27",
         status: "future",
         is_done: false,
-        percentage: 100,
+        percentage: 0,
     },
     {
         day: 28,
         date: "2024-01-28",
         status: "future",
         is_done: false,
-        percentage: 25,
+        percentage: 0,
     },
     {
         day: 29,
         date: "2024-01-29",
         status: "future",
         is_done: false,
-        percentage: 75,
+        percentage: 0,
     },
     {
         day: 30,
         date: "2024-01-30",
         status: "future",
         is_done: false,
-        percentage: 50,
+        percentage: 0,
     },
 ];
+
+
+export const PERCENTAGE_COLORS = {
+    0: "bg-dark-content",
+    25: "bg-box-25",
+    50: "bg-box-50",
+    75: "bg-box-75",
+    100: "bg-box-100",
+  };

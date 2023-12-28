@@ -1,9 +1,20 @@
-function Box({ day, date, status, is_done, percentage }) {
-  const styleBox = `bg-main-clr flex flex-col aspect-square w-full min-w-10 max-w-20 items-center justify-center justify-self-center rounded-lg opacity-${percentage}`;
+import { twMerge } from "tailwind-merge";
+import { PERCENTAGE_COLORS as colorData } from "../../data/data";
+
+const getBoxColorClass = (percentage) => {
+  // Ensure percentage is within 0-100 range for safety
+  const clampedPercentage = Math.max(0, Math.min(percentage, 100));
+  return colorData[Math.floor(clampedPercentage / 25) * 25];
+};
+
+function Box({ day, date, status, isDone, percentage }) {
+  const defaultVariant = "box-default";
+  const percentageColorVariant = getBoxColorClass(percentage);
+
   return (
-    <div className={styleBox}>
+    <div className={twMerge(defaultVariant, percentageColorVariant)}>
       <h3>{day}</h3>
-      <small>{date}</small>
+      {/* <small>{date}</small> */}
     </div>
   );
 }

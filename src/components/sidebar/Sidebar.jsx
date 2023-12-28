@@ -1,10 +1,6 @@
 import { Link } from "@tanstack/react-router";
-
-const navLinks = [
-  { to: "/dashboard", title: "Dashboard" },
-  { to: "/dashboard/challenges", title: "Challenges" },
-  { to: "/dashboard/tasks", title: "Tasks" },
-];
+import { SIDEBAR_ITEMS } from "../../data/constanItems";
+import { TOGGLE_ICONS } from "../../data/constanItems";
 
 function Sidebar() {
   return (
@@ -13,13 +9,13 @@ function Sidebar() {
         <Link to={"/"}>ChallengerX</Link>
       </div>
       <div className="absolute right-[-12px] top-2 flex h-6 w-6 select-none items-center justify-center rounded-full bg-red-50 text-red-400">
-        {"<"}
+        {TOGGLE_ICONS.arrowBack}
       </div>
       <div>
         <ul>
-          {navLinks.map((link) => (
-            <li key={link.to}>
-              <Link to={link.to}>{link.title}</Link>
+          {SIDEBAR_ITEMS.map((link) => (
+            <li key={link.path}>
+              <Link to={link.path}>{link.title}</Link>
             </li>
           ))}
         </ul>

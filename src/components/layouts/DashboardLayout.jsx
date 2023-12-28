@@ -2,6 +2,7 @@ import React from "react";
 import { Outlet } from "@tanstack/react-router";
 import Sidebar from "../sidebar/Sidebar";
 import Navbar from "../navbar/Navbar";
+import NavbarMobile from "../navbar/NavbarMobile";
 
 function DashboardLayout() {
   return (
