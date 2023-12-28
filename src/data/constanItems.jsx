@@ -1,8 +1,10 @@
 import { BiSolidDashboard } from "react-icons/bi";
 import { FaTasks } from "react-icons/fa";
 import { MdCalendarMonth } from "react-icons/md";
+import { CgGoogleTasks } from "react-icons/cg";
 import { IoIosArrowForward } from "react-icons/io";
 import { IoIosArrowBack } from "react-icons/io";
+
 
 export const TOGGLE_ICONS = {
   arrowBack: <IoIosArrowBack />,
@@ -23,6 +25,6 @@ export const SIDEBAR_ITEMS = [
   {
     title: "Tasks",
     path: "/dashboard/tasks",
-    icon: <FaTasks />,
+    icon: <CgGoogleTasks />,
   },
 ];

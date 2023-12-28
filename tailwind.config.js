@@ -16,13 +16,16 @@ export default {
       },
       gridTemplateColumns: {
         layout: "240px 1fr",
+        "layout-non-active-menu": "80px 1fr",
+        "layout-mobile": "1fr",
       },
       gridTemplateRows: {
         layout: "60px 1fr",
+        "layout-mobile": "60px 1fr",
       },
-
       gridTemplateAreas: {
         layout: ["sidebar navbar", "sidebar main"],
+        "layout-mobile": ["navbar", "main"],
       },
     },
   },
