@@ -8,6 +8,7 @@ import SidebarItem from "./SidebarItem";
 import { useStateContext } from "../../context/ContextProvider";
 import { twMerge } from "tailwind-merge";
 import {
+  framerIcon,
   framerSidebarBackground,
   framerSidebarPanel,
   framerText,
@@ -26,22 +27,24 @@ function Sidebar() {
       <motion.aside
         {...framerSidebarPanel}
         className={twMerge(
-          "fixed flex h-screen w-60 flex-col border-r-[1px] border-border-clr bg-dark-secondary p-4 grid-in-sidebar",
+          "fixed flex h-screen w-60 flex-col border-r-[1px] border-border-clr bg-dark-secondary p-4 transition-all duration-500 grid-in-sidebar",
           !activeMenu && "w-[80px]",
         )}
       >
-        <div className="self-center overflow-hidden text-lg font-bold text-main-clr">
+        <div className="relative self-center text-lg font-bold text-main-clr">
           <Link to={"/"} className="flex items-center justify-center gap-1">
+            <motion.span {...framerIcon}>
+              <SiExpertsexchange className="text-[24px]" />
+            </motion.span>
             {activeMenu && (
-              <motion.span {...framerText("text")} className="text-xl">
+              <motion.span {...framerText(2)} className="text-xl">
                 Challenger
               </motion.span>
             )}
-            <SiExpertsexchange className="text-[24px]" />
           </Link>
         </div>
         <div
-          className="absolute right-[-12px] top-4 z-30 flex h-6 w-6 cursor-pointer select-none items-center justify-center rounded-full bg-red-50 text-red-400 shadow-sm shadow-[#ffffffc8]"
+          className="absolute right-[-12px] top-4 z-30 flex h-6 w-6 cursor-pointer select-none items-center justify-center rounded-full bg-white text-border-clr"
           onClick={toggleMenu}
         >
           {activeMenu ? TOGGLE_ICONS.arrowBack : TOGGLE_ICONS.arrowForward}
@@ -56,7 +59,6 @@ function Sidebar() {
             />
           ))}
         </div>
-        <div>Logout</div>
       </motion.aside>
     </AnimatePresence>
   );

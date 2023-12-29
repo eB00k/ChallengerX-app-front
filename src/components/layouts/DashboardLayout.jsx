@@ -11,7 +11,7 @@ function DashboardLayout() {
   const isMobile = false;
   const variants = {
     default:
-      "grid min-h-screen w-full grid-cols-layout grid-rows-layout bg-dark-primary grid-areas-layout",
+      "grid min-h-screen w-full grid-cols-layout grid-rows-layout bg-dark-primary grid-areas-layout transition-all duration-500",
     nonActiveMenu: "grid-cols-layout-non-active-menu",
     mobile:
       "grid-areas-layout-mobile grid-cols-layout-mobile grid-rows-layout-mobile",

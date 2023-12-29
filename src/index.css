@@ -14,9 +14,8 @@
 :root {
   line-height: 1.5;
   font-weight: 400;
-
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #0D1117;
+  background-color: #0d1117;
+  color: #ffffff;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -35,23 +34,11 @@ body {
 
 @layer components {
   .container-main {
-    @apply rounded-xl border-[1px] border-border-clr bg-dark-secondary;
+    @apply text-txt-gray rounded-xl border-[1px] border-border-clr bg-dark-secondary;
   }
 
   .box-default {
-    @apply bg-dark-content flex aspect-square w-full min-w-10 max-w-20 flex-col items-center justify-center justify-self-center rounded-lg;
-  }
-
-  .box-future-day {
-  }
-
-  .box-done {
-  }
-
-  .box-missed {
-  }
-
-  .box-today {
+    @apply flex aspect-square w-full min-w-10 max-w-20 flex-col items-center justify-center justify-self-center rounded-lg bg-dark-content;
   }
 }
 

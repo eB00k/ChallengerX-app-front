@@ -8,7 +8,7 @@ const getBoxColorClass = (percentage) => {
 };
 
 function Box({ day, date, status, isDone, percentage }) {
-  const defaultVariant = "box-default";
+  const defaultVariant = "box-default text-txt-white";
   const percentageColorVariant = getBoxColorClass(percentage);
 
   return (

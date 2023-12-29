@@ -5,14 +5,17 @@ import { motion } from "framer-motion";
 import { useStateContext } from "../../context/ContextProvider";
 import { framerIcon, framerText } from "../../data/motionData";
 
-function SidebarItem({ idx, title, icon, path, isActive }) {
+function SidebarItem({ idx, title, icon, path, isLogout }) {
   const { activeMenu } = useStateContext();
   return (
-    <Link to={path}>
+    <Link
+      to={path}
+      activeOptions={{ exact: true }}
+      activeProps={{ className: "text-main-clr" }}
+    >
       <div
         className={twMerge(
-          "flex items-center gap-2 rounded-md p-2 hover:bg-dark-content",
-          isActive && title === "Dashboard" && "text-main-clr",
+          "flex items-center gap-2 rounded-md p-2 transition-all duration-300 hover:bg-dark-content",
           !activeMenu && "justify-center p-3",
         )}
       >
