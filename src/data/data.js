@@ -218,3 +218,83 @@ export const PERCENTAGE_COLORS = {
   75: "bg-box-75",
   100: "bg-box-100",
 };
+
+export const CHALLENGES_DATA = [
+  {
+    id: 1,
+    title: "30 Day Coding Challenge",
+    description:
+      "A month-long coding challenge to improve your programming skills.",
+    target_day: 30,
+    current_day: 20,
+  },
+  {
+    id: 2,
+    title: "Python Project Marathon",
+    description: "Complete a series of Python projects over the next 30 days.",
+    target_day: 30,
+    current_day: 15,
+  },
+  {
+    id: 3,
+    title: "Web Development Bootcamp",
+    description:
+      "Learn and build web applications in this intensive 2-week bootcamp.",
+    target_day: 14,
+    current_day: 7,
+  },
+  {
+    id: 4,
+    title: "Data Science Challenge",
+    description:
+      "Explore and analyze datasets to sharpen your data science skills.",
+    target_day: 30,
+    current_day: 25,
+  },
+  {
+    id: 5,
+    title: "JavaScript Mastery",
+    description:
+      "Become proficient in JavaScript through daily coding exercises.",
+    target_day: 30,
+    current_day: 10,
+  },
+  {
+    id: 6,
+    title: "Mobile App Development Sprint",
+    description: "Create a mobile app prototype within the next 21 days.",
+    target_day: 21,
+    current_day: 14,
+  },
+  {
+    id: 7,
+    title: "Machine Learning Challenge",
+    description:
+      "Implement machine learning algorithms and models in a month-long challenge.",
+    target_day: 30,
+    current_day: 18,
+  },
+  {
+    id: 8,
+    title: "React.js Crash Course",
+    description: "Master React.js fundamentals through daily coding sessions.",
+    target_day: 14,
+    current_day: 7,
+  },
+  {
+    id: 9,
+    title: "Cloud Computing Exploration",
+    description:
+      "Dive into cloud computing technologies over the next 25 days.",
+    target_day: 25,
+    current_day: 12,
+  },
+  {
+    id: 10,
+    title: "Algorithm Mastery Challenge",
+    description:
+      "Solve a variety of algorithmic problems to enhance your problem-solving skills.",
+    target_day: 30,
+    current_day: 10,
+  },
+];

@@ -1,6 +1,6 @@
-import CustomBox from "../../../components/box/CustomBox";
+import CustomBox from "../../../../components/box/CustomBox";
 import { twMerge } from "tailwind-merge";
-import { PERCENTAGE_COLORS as data } from "../../../data/data";
+import { PERCENTAGE_COLORS as data } from "../../../../data/data";
 
 function InfoLegend() {
   function renderBoxes() {

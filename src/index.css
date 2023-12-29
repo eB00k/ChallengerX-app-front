@@ -37,6 +37,10 @@ body {
     @apply text-txt-gray rounded-xl border-[1px] border-border-clr bg-dark-secondary;
   }
 
+  .challenge-box {
+    @apply text-txt-gray rounded-lg border-[1px] border-border-clr bg-dark-secondary;
+  }
+
   .box-default {
     @apply flex aspect-square w-full min-w-10 max-w-20 flex-col items-center justify-center justify-self-center rounded-lg bg-dark-content;
   }
@@ -45,6 +49,9 @@ body {
 @layer utilities {
   .spacing-6 {
     @apply m-6 p-6;
+  }
+  .spacing-6-0 {
+    @apply m-6 p-0;
   }
 
   .spacing {
