@@ -14,8 +14,8 @@ import Challenge from "../pages/dashboard/challenges/challenge/Challenge";
 import Index from "../pages/dashboard/Index";
 import Login from "../pages/login/Login";
 import Register from "../pages/register/Register";
-import NotFound from "../pages/notFound/NotFound";
 import HomeLayout from "../components/layouts/HomeLayout";
+import NotFound from "../pages/notFound/NotFound";
 
 const rootRoute = new RootRoute({
   component: () => <Outlet />,
@@ -79,7 +79,7 @@ const tasksRoute = new Route({
 
 const notFoundRoute = new NotFoundRoute({
   getParentRoute: () => rootRoute,
-  component: () => NotFound,
+  component: () => <NotFound />,
 });
 
 const routeTree = rootRoute.addChildren([
@@ -90,10 +90,9 @@ const routeTree = rootRoute.addChildren([
     challengeRoute,
     tasksRoute,
   ]),
-  notFoundRoute,
 ]);
 
-const router = new Router({ routeTree });
+const router = new Router({ routeTree, notFoundRoute });
 
 function Routes() {
   return <RouterProvider router={router} />;
