@@ -29,6 +29,6 @@ export const framerIcon = {
     type: "spring",
     stiffness: 260,
     damping: 20,
-    delay: 1.5,
+    delay: .5,
   },
 };

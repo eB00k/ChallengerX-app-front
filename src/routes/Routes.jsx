@@ -4,6 +4,7 @@ import {
   Router,
   Route,
   RootRoute,
+  NotFoundRoute,
 } from "@tanstack/react-router";
 import Home from "../pages/home/Home";
 import DashboardLayout from "../components/layouts/DashboardLayout";
@@ -14,29 +15,38 @@ import Index from "../pages/dashboard/Index";
 import Login from "../pages/login/Login";
 import Register from "../pages/register/Register";
 import NotFound from "../pages/notFound/NotFound";
+import HomeLayout from "../components/layouts/HomeLayout";
 
 const rootRoute = new RootRoute({
   component: () => <Outlet />,
 });
 
-const indexRoute = new Route({
+const homeRoute = new Route({
   getParentRoute: () => rootRoute,
+  component: HomeLayout,
+  id: "layout",
+});
+
+// Nested routes under HomeLayout
+const homeComponentRoute = new Route({
+  getParentRoute: () => homeRoute,
   path: "/",
   component: Home,
 });
 
 const loginRoute = new Route({
-  getParentRoute: () => rootRoute,
+  getParentRoute: () => homeRoute,
   path: "login",
   component: Login,
 });
 
 const registerRoute = new Route({
-  getParentRoute: () => rootRoute,
+  getParentRoute: () => homeRoute,
   path: "register",
   component: Register,
 });
 
+// Dashboard routes
 const dashboardRoute = new Route({
   getParentRoute: () => rootRoute,
   path: "dashboard",
@@ -67,21 +77,20 @@ const tasksRoute = new Route({
   component: Tasks,
 });
 
-const notFoundRoute = new Route({
-  component: NotFound,
+const notFoundRoute = new NotFoundRoute({
+  getParentRoute: () => rootRoute,
+  component: () => NotFound,
 });
 
 const routeTree = rootRoute.addChildren([
-  indexRoute,
-  loginRoute,
-  registerRoute,
+  homeRoute.addChildren([homeComponentRoute, loginRoute, registerRoute]),
   dashboardRoute.addChildren([
     dashboardIndexRoute,
     challengesRoute,
     challengeRoute,
     tasksRoute,
   ]),
-  // notFoundRoute
+  notFoundRoute,
 ]);
 
 const router = new Router({ routeTree });

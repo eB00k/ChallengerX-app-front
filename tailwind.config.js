@@ -21,16 +21,19 @@ export default {
         layout: "240px 1fr",
         "layout-non-active-menu": "80px 1fr",
         "layout-mobile": "1fr",
+        "layout-home": "1fr",
       },
       gridTemplateRows: {
-        layout: "60px 1fr",
-        "layout-mobile": "60px 1fr",
+        layout: "4rem 1fr",
+        "layout-mobile": "4rem 1fr",
+        "layout-home": "4rem 1fr",
       },
       gridTemplateAreas: {
         layout: ["sidebar navbar", "sidebar main"],
         "layout-mobile": ["navbar", "main"],
+        "layout-home": ["nabar", "main"],
       },
     },
   },
-  plugins: [require("@savvywombat/tailwindcss-grid-areas")],
+  plugins: [require("@savvywombat/tailwindcss-grid-areas"), require("daisyui")],
 };

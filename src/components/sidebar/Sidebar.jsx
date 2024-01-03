@@ -9,7 +9,6 @@ import { useStateContext } from "../../context/ContextProvider";
 import { twMerge } from "tailwind-merge";
 import {
   framerIcon,
-  framerSidebarBackground,
   framerSidebarPanel,
   framerText,
 } from "../../data/motionData";
